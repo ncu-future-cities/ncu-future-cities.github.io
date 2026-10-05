@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "2026-10-05-staff-photos-order",
+  "version": "2026-10-05-portrait-refinement",
   "people": [
     {
       "id": "lizhixiu",
@@ -131,8 +131,8 @@
       "research": "秀美乡村设计、室内空间设计。",
       "bio": "从事秀美乡村设计与室内空间设计，参与多项服务地方建设的设计实践。学院教师主页未列明专业技术职称，页面暂不推定。",
       "source": "https://jzysjxy.ncu.edu.cn/szdw/zzjs/cxghx/2a23e38b211542cc8b5593035d6da59f.htm",
-      "photo": "portraits/limingfei.jpg",
-      "photoAsset": "limingfei.jpg"
+      "photo": "portraits/limingfei.png",
+      "photoAsset": "limingfei.png"
     }
   ]
 }
