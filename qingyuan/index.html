@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="青原研究院网站框架：研究院介绍、人员介绍、研究方向与成果、研究院新闻。">
+  <meta name="description" content="青原研究院：研究院介绍、人员介绍、研究方向与成果、研究院新闻。">
   <meta name="robots" content="noindex,nofollow">
   <meta name="theme-color" content="#2e6a67">
   <title>青原研究院｜Qingyuan Institute</title>
@@ -263,6 +263,24 @@
 @media(max-width:850px){.institute-name{font-size:24px}.theme-placeholder{padding:30px}.place-title{font-size:42px}.place-en{font-size:12px;letter-spacing:.03em}.place-caption{margin-top:28px;font-size:12px}.research-output{margin-top:0}}
 @media(max-width:600px){.institute-name{font-size:22px}.identity-text .institute-english{font-size:11px}.identity-text .affiliation{font-size:10px}.theme-placeholder{padding:27px 22px 54px}.place-title{font-size:40px}.place-en{font-size:11px}.place-caption{margin-top:18px;padding-top:12px;font-size:11px}.news-cover{min-height:240px;padding:26px}.news-cover h3{font-size:24px}.article-page .header-inner{flex-wrap:wrap;padding-block:12px}.article-page .header-inner>.team-directory{margin-left:auto}.article-page .news-article{padding-block:30px 50px}.research-output{padding-top:12px}.footer-bottom{gap:20px}}
 @media(max-width:600px){.hero-art{padding-bottom:18px}.hero-art .photo-caption{position:static;display:block;background:none;color:var(--muted);padding:12px 0 0;font-size:11px}.carousel-controls{bottom:64px}}
+
+/* Teacher-supplied roster and agreement, 2026-10-22. */
+.person-external{cursor:default}
+.person .person-bio{font-size:13px;line-height:1.9;margin-top:12px;color:var(--ink);min-height:0}
+.person-visual{background:#fff}
+.person-visual img{object-fit:contain;object-position:center bottom}
+.topic-strip{flex-wrap:wrap;gap:18px 24px}
+.topic-strip a{gap:14px}
+.topic-strip a:not(:last-child){padding-right:24px}
+@media(max-width:600px){.topic-strip{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}.topic-strip a{justify-content:space-between;font-size:13px}.topic-strip a:not(:last-child){border:0;padding:0}.person .person-bio{font-size:12px;line-height:1.9}.disciplines{display:flex;flex-wrap:wrap;gap:8px 14px}.disciplines span:not(:last-child):after{display:none}}
+
+/* External staff biographies are collapsed until requested. */
+.person-bio-toggle{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:4px 0;margin-top:5px;border:0;background:transparent;color:var(--accent);font:inherit;font-size:13px;cursor:pointer;text-align:left}
+.person-bio-toggle:hover{text-decoration:underline;text-underline-offset:4px}
+.person-bio-toggle .icon{width:16px;height:16px}
+.person-bio-toggle[aria-expanded="true"] .icon{transform:rotate(180deg)}
+.person .person-bio[hidden]{display:none}
+.team-grid{align-items:start}
 </style>
 </head>
 <body id="top">
@@ -275,7 +293,7 @@
   </svg>
   <header class="header">
     <div class="wrap header-inner">
-      <a class="identity" href="#top" aria-label="青原研究院，返回首页"><span class="identity-text"><span class="institute-name">青原研究院</span><span class="institute-english" lang="en">Qingyuan Institute <span title="英文名称暂译">(provisional)</span></span><span class="affiliation">江西 · 吉安 · 青原</span></span></a>
+      <a class="identity" href="#top" aria-label="青原研究院，返回首页"><span class="identity-text"><span class="institute-name">青原研究院</span><span class="institute-english" lang="en">Qingyuan Institute</span><span class="affiliation">江西 · 吉安 · 青原</span></span></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="展开导航菜单"><span>菜单</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
       <nav class="nav" id="main-nav" aria-label="主导航"><a href="#about">研究院介绍<small lang="en">About</small></a><a href="#team">人员介绍<small lang="en">People</small></a><a href="#research">研究方向与成果<small lang="en">Research</small></a><a href="#news">研究院新闻<small lang="en">News</small></a></nav>
     </div>
@@ -284,150 +302,64 @@
     <section class="hero wrap" aria-labelledby="hero-heading">
       <div class="hero-grid">
         <div class="hero-copy">
-          <h1 id="hero-heading">立足青原山水，<br><span>共研文旅新境</span></h1>
-          <p class="hero-en" lang="en">Rooted in Qingyuan.<br>Exploring new possibilities for culture and tourism.</p>
-          <p class="hero-description">从青原山景区出发，<br>探索地域文化、游览体验<br>与数字文创的更多可能。</p>
+          <h1 id="hero-heading">立足青原山水，<br><span>共促乡村振兴</span></h1>
+          <p class="hero-en" lang="en">Rooted in Qingyuan.<br>Working together for rural revitalisation.</p>
+          <p class="hero-description">连接高校研究与地方需求，<br>推动乡村建设、文旅融合、<br>产业创新与人才合作。</p>
           <a class="primary-link" href="#research">探索研究方向<svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
         </div>
         <figure class="hero-art">
-          <div class="hero-frame" aria-label="青原主题素材预留轮播">
-            <div class="hero-slide is-active" aria-hidden="false"><div class="theme-placeholder"><span class="place-title">山水青原</span><span class="place-en" lang="en">LANDSCAPE &amp; CULTURE</span><span class="place-caption">青原山景区 · 实景图片待补充</span></div></div>
-            <div class="hero-slide" aria-hidden="true"><div class="theme-placeholder"><span class="place-title">行读青原</span><span class="place-en" lang="en">EXPLORE &amp; DISCOVER</span><span class="place-caption">景区导览地图 · 展示素材待补充</span></div></div>
-            <div class="hero-slide" aria-hidden="true"><div class="theme-placeholder"><span class="place-title">数字文旅</span><span class="place-en" lang="en">CULTURE IN NEW DIMENSIONS</span><span class="place-caption">AR 明信片 · 展示素材待补充</span></div></div>
+          <div class="hero-frame" aria-label="青原主题轮播">
+            <div class="hero-slide is-active" aria-hidden="false"><div class="theme-placeholder"><span class="place-title">山水青原</span><span class="place-en" lang="en">LANDSCAPE &amp; CULTURE</span><span class="place-caption">青原山水与地域文化</span></div></div>
+            <div class="hero-slide" aria-hidden="true"><div class="theme-placeholder"><span class="place-title">行读青原</span><span class="place-en" lang="en">EXPLORE &amp; DISCOVER</span><span class="place-caption">景区导览与游览体验</span></div></div>
+            <div class="hero-slide" aria-hidden="true"><div class="theme-placeholder"><span class="place-title">数字文旅</span><span class="place-en" lang="en">CULTURE IN NEW DIMENSIONS</span><span class="place-caption">AR 明信片与数字文化表达</span></div></div>
           </div>
-          <figcaption class="photo-caption" id="hero-caption">青原山景区 · 图片预留位</figcaption>
+          <figcaption class="photo-caption" id="hero-caption">山水青原</figcaption>
           <div class="carousel-controls" role="group" aria-label="选择首页主题"><button type="button" aria-label="显示第1个主题" aria-current="true">1</button><button type="button" aria-label="显示第2个主题" aria-current="false">2</button><button type="button" aria-label="显示第3个主题" aria-current="false">3</button><button type="button" class="carousel-pause" aria-label="暂停自动切换" aria-pressed="false">暂停</button></div>
         </figure>
       </div>
-      <div class="topic-strip" aria-label="研究主题快速入口"><span>江西省吉安市青原区</span><a href="#wayfinding" data-open-research="wayfinding">景区导览<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a><a href="#digital" data-open-research="digital">数字文创<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a><a href="#culture" data-open-research="culture">文化表达<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a></div>
+      <div class="topic-strip" aria-label="研究主题快速入口"><span>江西省吉安市青原区</span><a href="#rural" data-open-research="rural">农业农村<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a><a href="#tourism" data-open-research="tourism">文旅融合<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a><a href="#industry" data-open-research="industry">产业创新<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a><a href="#talent" data-open-research="talent">人才合作<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a></div>
     </section>
     <section class="section wrap" id="about" aria-labelledby="about-title"><div class="about-grid">
       <div class="about-side"><h2 class="about-title" id="about-title">研究院介绍<span class="section-en" lang="en">About the Institute</span></h2><p>立足青原<br>连接研究与实践</p></div>
-      <div class="about-body"><h3 class="lead">从地方出发，<br>让研究与文化相遇。</h3><p class="about-en" lang="en">Connecting research, local culture and practice in Qingyuan.</p><p>本页为青原研究院网站框架，暂围绕吉安市青原区、青原山景区的文化旅游与设计议题展示栏目。研究院正式简介、机构定位与合作信息将在资料确认后补充。</p><p class="about-en" lang="en">This initial website framework presents proposed themes in culture, tourism and design in Qingyuan District, Ji’an. The institute’s formal introduction and organisational information will be added once confirmed.</p>
-      <dl class="about-facts"><div><dt>地域关注 / Regional Focus</dt><dd>江西省吉安市青原区</dd></div><div><dt>机构介绍 / Institute Profile</dt><dd>正式资料待补充</dd></div></dl><div class="disciplines" aria-label="暂定关注议题"><span>地域文化 / Local Culture</span><span>景区导览 / Visitor Wayfinding</span><span>数字文创 / Digital Creative Design</span></div></div>
+      <div class="about-body"><h3 class="lead">立足地方需求，<br>服务乡村振兴。</h3><p class="about-en" lang="en">Connecting university research with rural development in Qingyuan.</p><p>根据共建合作协议，吉安市青原区人民政府与南昌大学共同建设“南昌大学青原乡村振兴发展研究院”。研究院结合青原区产业发展、文化资源与乡村振兴需求，发挥高校在科技创新、人才交流合作、文化传播等方面的优势，开展农业农村建设、文旅融合、产业创新及人才合作等领域的研究与实践。</p><p class="about-en" lang="en">Under the joint-development agreement between Qingyuan District People’s Government and Nanchang University, the institute brings university research and talent together with local needs in rural development, culture and tourism, industrial innovation and talent collaboration.</p>
+      <dl class="about-facts"><div><dt>地域关注 / Regional Focus</dt><dd>江西省吉安市青原区</dd></div><div><dt>共建单位 / Joint Partners</dt><dd>吉安市青原区人民政府 · 南昌大学</dd></div></dl><div class="disciplines" aria-label="合作领域"><span>农业农村 / Rural Development</span><span>文旅融合 / Culture &amp; Tourism</span><span>产业创新 / Industrial Innovation</span><span>人才合作 / Talent Collaboration</span></div></div>
     </div></section>
     <section class="research" id="research" aria-labelledby="research-title"><div class="wrap">
-      <div class="section-head"><h2 id="research-title">研究方向与成果<span class="section-en" lang="en">Research &amp; Projects</span></h2><p>从游览体验到数字表达，预留研究与成果展示空间。<br>以下为暂定框架，正式方向与成果待确认。<span lang="en">A provisional framework for visitor experience and digital interpretation. Research areas and project outputs are subject to confirmation.</span></p></div>
-      <details class="research-item" id="wayfinding" open><summary><span class="research-theme">景区导览<span lang="en">Visitor Wayfinding</span></span><h3>景区地图与游览体验<span lang="en">Visitor Maps and Experience Design</span></h3><span class="expand-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="vertical" d="M12 5v14"/></svg></span></summary><div class="research-body"><div class="research-prose"><p>暂以青原山景区地图为切入点，预留导览信息、游览路线与地图设计的研究展示空间。具体范围、路线和设计稿待资料确认后补充。</p><p lang="en">A proposed area centred on visitor maps for the Qingyuan Mountain scenic area, with space for wayfinding information, visitor routes and map design. Scope, routes and design materials remain to be confirmed.</p></div><div><h4>暂定议题<span lang="en">Proposed Topics</span></h4><ul class="research-tags"><li>景区地图<span lang="en">Visitor Maps</span></li><li>导览信息<span lang="en">Wayfinding Information</span></li><li>游览体验<span lang="en">Visitor Experience</span></li></ul></div><div class="research-output">成果预留 · 地图方案与设计说明待补充<span lang="en">Map designs and supporting notes to be added</span></div></div></details>
-<details class="research-item" id="digital" ><summary><span class="research-theme">数字文创<span lang="en">Digital Creative Design</span></span><h3>AR 明信片与数字文化表达<span lang="en">AR Postcards and Digital Cultural Interpretation</span></h3><span class="expand-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="vertical" d="M12 5v14"/></svg></span></summary><div class="research-body"><div class="research-prose"><p>预留 AR 明信片及其交互内容的展示空间，探索将地方文化元素转化为可观看、可体验的数字内容。具体作品、演示链接和项目说明待确认后补充。</p><p lang="en">Space for AR postcards and interactive content, exploring ways to translate local cultural elements into digital experiences. Confirmed works, demonstration links and project descriptions will be added later.</p></div><div><h4>暂定议题<span lang="en">Proposed Topics</span></h4><ul class="research-tags"><li>AR 明信片<span lang="en">AR Postcards</span></li><li>交互体验<span lang="en">Interactive Experiences</span></li><li>文化表达<span lang="en">Cultural Interpretation</span></li></ul></div><div class="research-output">成果预留 · 作品图片、体验入口与项目说明待补充<span lang="en">Project images, experience links and descriptions to be added</span></div></div></details>
-<details class="research-item" id="culture" ><summary><span class="research-theme">地域文化<span lang="en">Local Culture</span></span><h3>地域文化与文旅设计<span lang="en">Local Culture and Tourism Design</span></h3><span class="expand-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="vertical" d="M12 5v14"/></svg></span></summary><div class="research-body"><div class="research-prose"><p>本方向暂作内容占位，预留青原地域文化研究、文创设计与相关实践的展示空间。正式研究名称、项目资料和成果内容由研究院后续确认。</p><p lang="en">This provisional area reserves space for research on Qingyuan’s local culture, creative design and related practice. The institute will confirm the formal research area, project materials and outputs.</p></div><div><h4>暂定议题<span lang="en">Proposed Topics</span></h4><ul class="research-tags"><li>文化资源<span lang="en">Cultural Resources</span></li><li>文创设计<span lang="en">Creative Product Design</span></li><li>成果展示<span lang="en">Project Presentation</span></li></ul></div><div class="research-output">成果预留 · 正式研究方向及成果材料待确认<span lang="en">Formal research area and project materials pending confirmation</span></div></div></details>
-      <p class="research-note">点击方向可展开详情；成果素材将在确认后补充。<span lang="en">Select an area to view details. Confirmed project materials will be added later.</span></p>
+      <div class="section-head"><h2 id="research-title">研究方向与成果<span class="section-en" lang="en">Research &amp; Projects</span></h2><p>围绕共建合作协议，开展四个领域的研究与实践。<span lang="en">Four areas of collaboration set out in the joint-development agreement.</span></p></div>
+      <details class="research-item" id="rural" open><summary><span class="research-theme">农业农村<span lang="en">Rural Development</span></span><h3>推动农业农村建设<span lang="en">Agriculture and Rural Development</span></h3><span class="expand-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="vertical" d="M12 5v14"/></svg></span></summary><div class="research-body"><div class="research-prose"><p>围绕青原区乡村振兴需求，探索建设“四融一共”和美乡村示范点，开展规划设计、技术支持与运营帮扶。依托现有农业产业基础，开展乡村产业品牌设计与包装、营销策划推广、农产品供应链及新型农村集体经济等方面的研究与实践，推动农业人才培训、产业对接和资源共享。</p><p lang="en">Support rural demonstration sites in Qingyuan through planning, technical advice and operational assistance. Work on agricultural branding, packaging, marketing, supply chains and rural collective economies, alongside training and resource sharing.</p></div><div><h4>合作议题<span lang="en">Collaboration Topics</span></h4><ul class="research-tags"><li>和美乡村示范点<span lang="en">Rural Demonstration Sites</span></li><li>乡村产业建设<span lang="en">Rural Industries</span></li><li>品牌与供应链<span lang="en">Branding and Supply Chains</span></li></ul></div></div></details>
+<details class="research-item" id="tourism" ><summary><span class="research-theme">文旅融合<span lang="en">Culture and Tourism</span></span><h3>推进文旅融合发展<span lang="en">Integrated Culture and Tourism Development</span></h3><span class="expand-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="vertical" d="M12 5v14"/></svg></span></summary><div class="research-body"><div class="research-prose"><p>围绕青原区相关景区，推动研学基地与写生基地建设，组织专题研学、写生等活动，促进教育与旅游深度融合。开展文旅资源调研，挖掘青原庐陵文化内涵，参与城市文旅 IP 设计与文化创意礼品开发，支持文旅资源开发与创新。</p><p lang="en">Develop field-study and sketching opportunities in Qingyuan’s scenic areas. Research local tourism resources and Luling culture, and contribute to tourism identity design and cultural gift development.</p></div><div><h4>合作议题<span lang="en">Collaboration Topics</span></h4><ul class="research-tags"><li>研学与写生基地<span lang="en">Study and Sketching Bases</span></li><li>文旅资源调研<span lang="en">Cultural Tourism Research</span></li><li>文旅 IP 与文创<span lang="en">Tourism Identity and Cultural Products</span></li></ul></div></div></details>
+<details class="research-item" id="industry" ><summary><span class="research-theme">产业创新<span lang="en">Industry and Innovation</span></span><h3>推动产业创新与企业赋能<span lang="en">Industrial Innovation and Enterprise Development</span></h3><span class="expand-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="vertical" d="M12 5v14"/></svg></span></summary><div class="research-body"><div class="research-prose"><p>为青原区相关企业提供产品包装设计与优化支持，提升品牌表达、功能性和市场适应性，并推广环保包装。推动食品科学领域的创新科技成果在辖区企业落地转化；结合市场调研与目标受众分析，开展品牌定位、形象设计、数字营销与社交媒体推广，提供持续的营销优化与效果评估支持。</p><p lang="en">Support product packaging, brand communication and environmentally responsible design. Facilitate the application of food-science research in local enterprises, alongside market research, brand positioning, digital marketing and evaluation.</p></div><div><h4>合作议题<span lang="en">Collaboration Topics</span></h4><ul class="research-tags"><li>产品包装设计<span lang="en">Packaging Design</span></li><li>农业科研成果转化<span lang="en">Agricultural Research Transfer</span></li><li>品牌与营销策划<span lang="en">Branding and Marketing</span></li></ul></div></div></details>
+<details class="research-item" id="talent" ><summary><span class="research-theme">人才合作<span lang="en">Talent and Collaboration</span></span><h3>人才交流与合作<span lang="en">Talent Exchange and Collaboration</span></h3><span class="expand-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="vertical" d="M12 5v14"/></svg></span></summary><div class="research-body"><div class="research-prose"><p>推动人才双向交流与订单式教育培训，支持毕业生就业创业、返乡实习实践及就业创业服务点建设。结合青原产业特色与乡村资源，联合举办创新创业大赛，整合设计、规划、运营等领域资源；共同申报人才项目，争取共建人才培养和博士后实践基地、技术创新中心等平台，组织教师与学生开展教学、科研和实践活动。</p><p lang="en">Promote talent exchange, tailored training, graduate employment and entrepreneurship. Collaborate on innovation competitions, talent programmes and training or research platforms, with opportunities for teaching, research and field practice.</p></div><div><h4>合作议题<span lang="en">Collaboration Topics</span></h4><ul class="research-tags"><li>人才交流与培训<span lang="en">Exchange and Training</span></li><li>就业创业支持<span lang="en">Employment and Entrepreneurship</span></li><li>创新创业大赛<span lang="en">Innovation Competitions</span></li><li>人才项目与平台共建<span lang="en">Talent Programmes and Shared Platforms</span></li></ul></div></div></details>
+      <p class="research-note">点击研究方向展开详情。<span lang="en">Select a research area to view details.</span></p>
     </div></section>
     <section class="section team" id="team" aria-labelledby="team-title"><div class="wrap">
-      <div class="section-head"><h2 id="team-title">人员介绍<span class="section-en" lang="en">People</span></h2><div class="team-head-note"><p>暂用原网站的 12 位教师展示页面效果，不代表青原研究院正式成员名单。点击卡片可打开教师个人主页。</p><a class="team-directory" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/index.htm" target="_blank" rel="noopener noreferrer">查看学院教师目录<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a></div></div>
-      <div class="team-grid" aria-label="暂用教师介绍展示"><a class="person" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/yssjx/75b0549da89949718f97653234bddd20.htm" target="_blank" rel="noopener noreferrer" aria-label="查看李枝秀南昌大学教师主页"><div class="person-visual"><img src="portraits/lizhixiu-normalized.png" alt="李枝秀肖像" width="600" height="800" loading="lazy"></div><h3>李枝秀</h3><p>教授</p><span class="person-action">查看南昌大学教师主页<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
-<a class="person" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/cxghx/09da438e7e7a468eabceed3d72643a74.htm" target="_blank" rel="noopener noreferrer" aria-label="查看郑文晖南昌大学教师主页"><div class="person-visual"><img src="portraits/zhengwenhui-normalized.png" alt="郑文晖肖像" width="600" height="800" loading="lazy"></div><h3>郑文晖</h3><p>教授</p><span class="person-action">查看南昌大学教师主页<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
-<a class="person" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/yssjx/aabbd98c92ba4fe29a3f966d10832a18.htm" target="_blank" rel="noopener noreferrer" aria-label="查看梅小清南昌大学教师主页"><div class="person-visual"><img src="portraits/meixiaoqing-normalized.png" alt="梅小清肖像" width="600" height="800" loading="lazy"></div><h3>梅小清</h3><p>教授</p><span class="person-action">查看南昌大学教师主页<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
-<a class="person" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/cxghx/328ecff7accc49be9cdcdfafc9720675.htm" target="_blank" rel="noopener noreferrer" aria-label="查看周志仪南昌大学教师主页"><div class="person-visual"><img src="portraits/zhouzhiyi-normalized.png" alt="周志仪肖像" width="600" height="800" loading="lazy"></div><h3>周志仪</h3><p>教授</p><span class="person-action">查看南昌大学教师主页<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
-<a class="person" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/jzx/5e57916ca7cc4890b4fb733713b0a2b4.htm" target="_blank" rel="noopener noreferrer" aria-label="查看王雪强南昌大学教师主页"><div class="person-visual"><img src="portraits/wangxueqiang-normalized.png" alt="王雪强肖像" width="600" height="800" loading="lazy"></div><h3>王雪强</h3><p>教授</p><span class="person-action">查看南昌大学教师主页<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
-<a class="person" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/yssjx/a40278905d9d4f109bf2487fc87a1e63.htm" target="_blank" rel="noopener noreferrer" aria-label="查看黄东升南昌大学教师主页"><div class="person-visual"><img src="portraits/huangdongsheng-normalized.png" alt="黄东升肖像" width="600" height="800" loading="lazy"></div><h3>黄东升</h3><p>教授</p><span class="person-action">查看南昌大学教师主页<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
-<a class="person" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/jzx/5b3f948c046f4114829386fb64441d25.htm" target="_blank" rel="noopener noreferrer" aria-label="查看黄景勇南昌大学教师主页"><div class="person-visual"><img src="portraits/huangjingyong-normalized.png" alt="黄景勇肖像" width="600" height="800" loading="lazy"></div><h3>黄景勇</h3><p>教授</p><span class="person-action">查看南昌大学教师主页<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
-<a class="person" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/yssjx/8db9f5e7307b4d92a48ba313052d436e.htm" target="_blank" rel="noopener noreferrer" aria-label="查看魏阳阳南昌大学教师主页"><div class="person-visual"><img src="portraits/weiyangyang-normalized.png" alt="魏阳阳肖像" width="600" height="800" loading="lazy"></div><h3>魏阳阳</h3><p>副教授</p><span class="person-action">查看南昌大学教师主页<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
-<a class="person" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/jzx/d66275a2a6054a43b55d2c2a2ffb784c.htm" target="_blank" rel="noopener noreferrer" aria-label="查看张嘉新南昌大学教师主页"><div class="person-visual"><img src="portraits/zhangjiaxin-normalized.png" alt="张嘉新肖像" width="600" height="800" loading="lazy"></div><h3>张嘉新</h3><p>副教授</p><span class="person-action">查看南昌大学教师主页<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
-<a class="person" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/cxghx/2c22efc221cf4d12b62f22efba503c3b.htm" target="_blank" rel="noopener noreferrer" aria-label="查看龙春英南昌大学教师主页"><div class="person-visual"><img src="portraits/longchunying-normalized.png" alt="龙春英肖像" width="600" height="800" loading="lazy"></div><h3>龙春英</h3><p>副教授</p><span class="person-action">查看南昌大学教师主页<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
-<a class="person" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/yssjx/e46b8a73829948299e457e500225ce4c.htm" target="_blank" rel="noopener noreferrer" aria-label="查看王中杰南昌大学教师主页"><div class="person-visual"><img src="portraits/wangzhongjie-normalized.png" alt="王中杰肖像" width="600" height="800" loading="lazy"></div><h3>王中杰</h3><p>副教授</p><span class="person-action">查看南昌大学教师主页<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
-<a class="person" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/cxghx/2a23e38b211542cc8b5593035d6da59f.htm" target="_blank" rel="noopener noreferrer" aria-label="查看李名飞南昌大学教师主页"><div class="person-visual"><img src="portraits/limingfei-normalized.png" alt="李名飞肖像" width="600" height="800" loading="lazy"></div><h3>李名飞</h3><p></p><span class="person-action">查看南昌大学教师主页<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a></div>
+      <div class="section-head"><h2 id="team-title">人员介绍<span class="section-en" lang="en">People</span></h2><div class="team-head-note"><p>点击教师卡片查看学院主页；点击“展开介绍”了解外聘人员。</p><a class="team-directory" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/index.htm" target="_blank" rel="noopener noreferrer">查看学院教师目录<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a></div></div>
+      <div class="team-grid" aria-label="研究院团队成员"><a class="person" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/yssjx/75b0549da89949718f97653234bddd20.htm" target="_blank" rel="noopener noreferrer" aria-label="查看李枝秀南昌大学教师主页"><div class="person-visual"><img src="portraits/lizhixiu-normalized.png" alt="李枝秀肖像" width="600" height="800" loading="lazy"></div><h3 id="person-lizhixiu">李枝秀</h3><p class="person-title">教授</p><span class="person-action">查看南昌大学教师主页<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
+<a class="person" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/cxghx/328ecff7accc49be9cdcdfafc9720675.htm" target="_blank" rel="noopener noreferrer" aria-label="查看周志仪南昌大学教师主页"><div class="person-visual"><img src="portraits/zhouzhiyi-normalized.png" alt="周志仪肖像" width="600" height="800" loading="lazy"></div><h3 id="person-zhouzhiyi">周志仪</h3><p class="person-title">教授</p><span class="person-action">查看南昌大学教师主页<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
+<a class="person" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/jzx/5b3f948c046f4114829386fb64441d25.htm" target="_blank" rel="noopener noreferrer" aria-label="查看黄景勇南昌大学教师主页"><div class="person-visual"><img src="portraits/huangjingyong-normalized.png" alt="黄景勇肖像" width="600" height="800" loading="lazy"></div><h3 id="person-huangjingyong">黄景勇</h3><p class="person-title">教授</p><span class="person-action">查看南昌大学教师主页<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
+<a class="person" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/yssjx/a40278905d9d4f109bf2487fc87a1e63.htm" target="_blank" rel="noopener noreferrer" aria-label="查看黄东升南昌大学教师主页"><div class="person-visual"><img src="portraits/huangdongsheng-normalized.png" alt="黄东升肖像" width="600" height="800" loading="lazy"></div><h3 id="person-huangdongsheng">黄东升</h3><p class="person-title">教授</p><span class="person-action">查看南昌大学教师主页<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
+<a class="person" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/jzx/d66275a2a6054a43b55d2c2a2ffb784c.htm" target="_blank" rel="noopener noreferrer" aria-label="查看张嘉新南昌大学教师主页"><div class="person-visual"><img src="portraits/zhangjiaxin-normalized.png" alt="张嘉新肖像" width="600" height="800" loading="lazy"></div><h3 id="person-zhangjiaxin">张嘉新</h3><p class="person-title">副教授</p><span class="person-action">查看南昌大学教师主页<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
+<a class="person" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/W/82df1b3dcbf24a08b5a08b0f8e4d04a3.htm" target="_blank" rel="noopener noreferrer" aria-label="查看王睿南昌大学教师主页"><div class="person-visual"><img src="portraits/wangrui-ppt.jpg" alt="王睿肖像" width="600" height="800" loading="lazy"></div><h3 id="person-wangrui">王睿</h3><p class="person-title">副教授</p><span class="person-action">查看南昌大学教师主页<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
+<a class="person" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/cxghx/2a23e38b211542cc8b5593035d6da59f.htm" target="_blank" rel="noopener noreferrer" aria-label="查看李名飞南昌大学教师主页"><div class="person-visual"><img src="portraits/limingfei-normalized.png" alt="李名飞肖像" width="600" height="800" loading="lazy"></div><h3 id="person-limingfei">李名飞</h3><p class="person-title"></p><span class="person-action">查看南昌大学教师主页<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
+<a class="person" href="https://jzysjxy.ncu.edu.cn/szdw/zzjs/L/9394bb4540694359842c9aae29674389.htm" target="_blank" rel="noopener noreferrer" aria-label="查看李韵琴南昌大学教师主页"><div class="person-visual"><img src="portraits/liyunqin-ppt.png" alt="李韵琴肖像" width="600" height="800" loading="lazy"></div><h3 id="person-liyunqin">李韵琴</h3><p class="person-title">讲师</p><span class="person-action">查看南昌大学教师主页<svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
+<article class="person person-external" aria-labelledby="person-liumao"><div class="person-visual"><img src="portraits/liumao-ppt.jpg" alt="刘茂肖像" width="600" height="800" loading="lazy"></div><h3 id="person-liumao">刘茂</h3><p class="person-title">正高级工程师 · 外聘人员</p><button class="person-bio-toggle" type="button" aria-expanded="false" aria-controls="bio-liumao"><span>展开介绍</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><p class="person-bio" id="bio-liumao" hidden>南昌大学江西省地域重点实验室副主任，国家一级注册结构工程师，现任南昌大学设计研究院一分院院长。主持完成多项重大工程项目，荣获中国建设工程鲁班奖、国家绿色建筑创新奖及多项省级优秀设计奖。</p></article>
+<article class="person person-external" aria-labelledby="person-yangbaisong"><div class="person-visual"><img src="portraits/yangbaisong-white-v1.png" alt="杨柏松肖像" width="600" height="800" loading="lazy"></div><h3 id="person-yangbaisong">杨柏松</h3><p class="person-title">外聘人员</p><button class="person-bio-toggle" type="button" aria-expanded="false" aria-controls="bio-yangbaisong"><span>展开介绍</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><p class="person-bio" id="bio-yangbaisong" hidden>南昌大学青原乡村振兴发展研究院办公室主任，主要从事城市更新、乡村振兴、城乡规划、全过程咨询的经营管理工作，参与多项重大工程项目，具有丰富的经营与实践经验。</p></article>
+<article class="person person-external" aria-labelledby="person-yanghaodong"><div class="person-visual"><img src="portraits/yanghaodong-white-v1.png" alt="杨浩冬肖像" width="600" height="800" loading="lazy"></div><h3 id="person-yanghaodong">杨浩冬</h3><p class="person-title">外聘人员</p><button class="person-bio-toggle" type="button" aria-expanded="false" aria-controls="bio-yanghaodong"><span>展开介绍</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><p class="person-bio" id="bio-yanghaodong" hidden>南昌大学乡村振兴发展研究院科研助理。主要从事乡村振兴、城乡规划、城市更新及全过程工程咨询领域，协助开展科研项目落地运营。熟悉乡村振兴政策导向与地方项目落地流程，为区域城乡融合发展提供专业经营支撑。</p></article></div>
     </div></section>
     <section class="section wrap" id="news" aria-labelledby="news-title">
       <div class="section-head"><h2 id="news-title">研究院新闻<span class="section-en" lang="en">News</span></h2><button class="news-more-trigger" type="button" aria-haspopup="dialog" aria-controls="news-more-dialog">更多新闻 <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></button></div>
-      <div class="news-grid"><div class="news-cover"><svg class="icon" aria-hidden="true"><use href="#photo"/></svg><h3>研究院动态</h3><p>新闻图片与正式稿件待补充。</p><p lang="en">News and images will be added here.</p><a class="team-directory" href="news/article-preview.html">查看文章页版式示例 →</a></div><ul class="news-list" aria-label="研究院新闻"><li class="news-item"><span class="news-date">版式示例</span><div><h3><a href="news/article-preview.html">查看新闻文章页示例</a></h3><p>仅演示跳转与阅读版式，不是正式新闻。</p></div></li><li class="news-item"><span class="news-date">待发布</span><div><h3>新闻内容待补充</h3><p>正式稿件确认后，将展示标题、日期与摘要。</p></div></li><li class="news-item"><span class="news-date">待发布</span><div><h3>新闻内容待补充</h3><p>正式稿件确认后，将展示标题、日期与摘要。</p></div></li></ul></div>
-      <dialog class="news-dialog" id="news-more-dialog" aria-labelledby="news-more-title"><div class="news-dialog-head"><h3 id="news-more-title">全部新闻</h3><button class="news-dialog-close" type="button" aria-label="关闭新闻列表"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><ul class="news-list" aria-label="全部研究院新闻"><li class="news-empty">暂无正式新闻。<br><span lang="en">No news has been published yet.</span></li></ul><p class="news-dialog-note">正式新闻稿件提供后，将在此展示。</p><a class="team-directory" href="news/article-preview.html">查看文章页版式示例 →</a></dialog>
+      <div class="news-grid"><div class="news-cover"><svg class="icon" aria-hidden="true"><use href="#photo"/></svg><h3>研究院动态</h3><p lang="en">Institute News</p></div><ul class="news-list" aria-label="研究院新闻"><li class="news-empty">暂无新闻。<br><span lang="en">No news has been published yet.</span></li></ul></div>
+      <dialog class="news-dialog" id="news-more-dialog" aria-labelledby="news-more-title"><div class="news-dialog-head"><h3 id="news-more-title">全部新闻</h3><button class="news-dialog-close" type="button" aria-label="关闭新闻列表"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><ul class="news-list" aria-label="全部研究院新闻"><li class="news-empty">暂无新闻。<br><span lang="en">No news has been published yet.</span></li></ul></dialog>
     </section>
   </main>
-  <footer class="footer"><div class="wrap"><div class="footer-main"><div><div class="footer-name">青原研究院</div><div class="footer-name-en" lang="en">Qingyuan Institute (provisional)</div><p>江西省吉安市青原区 · 正式介绍与联系信息待补充</p></div><div class="footer-links"><a href="#top">返回顶部<svg class="icon" aria-hidden="true"><use href="#up"/></svg></a></div></div><div class="footer-bottom"><span>框架展示 · 英文名称及文案为暂译</span><details class="credits"><summary>素材与字体说明</summary><div class="credits-content"><p>暂用用户确认的原站 12 位教师及已调整肖像；正式成员名单待确认。教师主页链接指向南昌大学建筑与设计学院。青原景区照片、研究成果和新闻图片尚未提供，当前为明确标注的占位内容。</p><p>标题沿用原站 Noto Serif SC 字体子集，未覆盖的新字使用本机宋体回退。正式字体许可如下。</p><details><summary>查看字体许可</summary><pre class="font-license">This Font Software is licensed under the SIL Open Font License,
-Version 1.1.
-
-This license is copied below, and is also available with a FAQ at:
-http://scripts.sil.org/OFL
-
------------------------------------------------------------
-SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
------------------------------------------------------------
-
-PREAMBLE
-The goals of the Open Font License (OFL) are to stimulate worldwide
-development of collaborative font projects, to support the font
-creation efforts of academic and linguistic communities, and to
-provide a free and open framework in which fonts may be shared and
-improved in partnership with others.
-
-The OFL allows the licensed fonts to be used, studied, modified and
-redistributed freely as long as they are not sold by themselves. The
-fonts, including any derivative works, can be bundled, embedded,
-redistributed and/or sold with any software provided that any reserved
-names are not used by derivative works. The fonts and derivatives,
-however, cannot be released under any other type of license. The
-requirement for fonts to remain under this license does not apply to
-any document created using the fonts or their derivatives.
-
-DEFINITIONS
-&quot;Font Software&quot; refers to the set of files released by the Copyright
-Holder(s) under this license and clearly marked as such. This may
-include source files, build scripts and documentation.
-
-&quot;Reserved Font Name&quot; refers to any names specified as such after the
-copyright statement(s).
-
-&quot;Original Version&quot; refers to the collection of Font Software
-components as distributed by the Copyright Holder(s).
-
-&quot;Modified Version&quot; refers to any derivative made by adding to,
-deleting, or substituting -- in part or in whole -- any of the
-components of the Original Version, by changing formats or by porting
-the Font Software to a new environment.
-
-&quot;Author&quot; refers to any designer, engineer, programmer, technical
-writer or other person who contributed to the Font Software.
-
-PERMISSION &amp; CONDITIONS
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of the Font Software, to use, study, copy, merge, embed,
-modify, redistribute, and sell modified and unmodified copies of the
-Font Software, subject to the following conditions:
-
-1) Neither the Font Software nor any of its individual components, in
-Original or Modified Versions, may be sold by itself.
-
-2) Original or Modified Versions of the Font Software may be bundled,
-redistributed and/or sold with any software, provided that each copy
-contains the above copyright notice and this license. These can be
-included either as stand-alone text files, human-readable headers or
-in the appropriate machine-readable metadata fields within text or
-binary files as long as those fields can be easily viewed by the user.
-
-3) No Modified Version of the Font Software may use the Reserved Font
-Name(s) unless explicit written permission is granted by the
-corresponding Copyright Holder. This restriction only applies to the
-primary font name as presented to the users.
-
-4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
-Software shall not be used to promote, endorse or advertise any
-Modified Version, except to acknowledge the contribution(s) of the
-Copyright Holder(s) and the Author(s) or with their explicit written
-permission.
-
-5) The Font Software, modified or unmodified, in part or in whole,
-must be distributed entirely under this license, and must not be
-distributed under any other license. The requirement for fonts to
-remain under this license does not apply to any document created using
-the Font Software.
-
-TERMINATION
-This license becomes null and void if any of the above conditions are
-not met.
-
-DISCLAIMER
-THE FONT SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
-OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
-COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
-DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
-OTHER DEALINGS IN THE FONT SOFTWARE.
-</pre></details></div></details></div></div></footer>
+  <footer class="footer"><div class="wrap"><div class="footer-main"><div><div class="footer-name">青原研究院</div><div class="footer-name-en" lang="en">Qingyuan Institute</div><p>江西省吉安市青原区</p></div><div class="footer-links"><a href="#top">返回顶部<svg class="icon" aria-hidden="true"><use href="#up"/></svg></a></div></div></div></footer>
   <script>(() => {
+  document.querySelectorAll('.person-bio-toggle').forEach(button=>button.addEventListener('click',()=>{
+    const expanded=button.getAttribute('aria-expanded')!=='true';
+    button.setAttribute('aria-expanded',String(expanded));
+    button.querySelector('span').textContent=expanded?'收起介绍':'展开介绍';
+    document.getElementById(button.getAttribute('aria-controls')).hidden=!expanded;
+  }));
   const nav=document.querySelector('#main-nav'), toggle=document.querySelector('.menu-toggle');
   const setMenu=open=>{nav.classList.toggle('is-open',open);toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'收起导航菜单':'展开导航菜单');};
   toggle.addEventListener('click',()=>setMenu(toggle.getAttribute('aria-expanded')!=='true'));
@@ -441,7 +373,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
   let ticking=false;window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(()=>{updateActive();ticking=false;});ticking=true;}},{passive:true});
   window.addEventListener('resize',()=>{if(innerWidth>850)setMenu(false);updateActive();});updateActive();
   const slides=[...document.querySelectorAll('.hero-slide')], buttons=[...document.querySelectorAll('.carousel-controls button:not(.carousel-pause)')];
-  const captions=['青原山景区 · 图片预留位','景区导览地图 · 成果预留位','AR 明信片 · 成果预留位'];
+  const captions=['山水青原','行读青原','数字文旅'];
   const pause=document.querySelector('.carousel-pause'), frame=document.querySelector('.hero-art');
   const reduce=matchMedia('(prefers-reduced-motion: reduce)');
   let index=0, timer=null, paused=reduce.matches;
