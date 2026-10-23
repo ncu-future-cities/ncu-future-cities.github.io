@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "version": "2026-10-22-collapsible-bios",
+  "version": "2026-10-23-titles-and-institute-name",
   "status": "teacher-supplied-roster",
-  "sortNote": "校内教师在前，已明确职称保持教授、副教授、讲师顺序；李名飞未明确职称，不补写。按用户要求，讲师之后连续排列刘茂、杨柏松、杨浩冬。",
+  "sortNote": "校内教师按教授、副教授、讲师排列；李名飞职称由用户确认为副教授。按用户要求，讲师后连续排列刘茂、杨柏松、杨浩冬，职位按2026-10-23用户提供内容展示。",
   "people": [
     {
       "id": "lizhixiu",
@@ -55,7 +55,7 @@
     {
       "id": "limingfei",
       "name": "李名飞",
-      "title": "",
+      "title": "副教授",
       "source": "https://jzysjxy.ncu.edu.cn/szdw/zzjs/cxghx/2a23e38b211542cc8b5593035d6da59f.htm",
       "photo": "portraits/limingfei-normalized.png",
       "photoAsset": "limingfei-normalized.png"
@@ -71,17 +71,17 @@
     {
       "id": "liumao",
       "name": "刘茂",
-      "title": "正高级工程师",
+      "title": "正高级工程师·南昌大学设计研究院综合分院院长",
       "external": true,
       "source": "",
       "photoAsset": "liumao-ppt.jpg",
-      "bio": "南昌大学江西省地域重点实验室副主任，国家一级注册结构工程师，现任南昌大学设计研究院一分院院长。主持完成多项重大工程项目，荣获中国建设工程鲁班奖、国家绿色建筑创新奖及多项省级优秀设计奖。",
+      "bio": "南昌大学江西省地域重点实验室副主任，国家一级注册结构工程师，现任南昌大学设计研究院综合分院院长。主持完成多项重大工程项目，荣获中国建设工程鲁班奖、国家绿色建筑创新奖及多项省级优秀设计奖。",
       "photo": "portraits/liumao-ppt.jpg"
     },
     {
       "id": "yangbaisong",
       "name": "杨柏松",
-      "title": "",
+      "title": "青原研究院办公室主任",
       "external": true,
       "source": "",
       "photoAsset": "yangbaisong-white-v1.png",
@@ -91,11 +91,11 @@
     {
       "id": "yanghaodong",
       "name": "杨浩冬",
-      "title": "",
+      "title": "青原研究院特派专员",
       "external": true,
       "source": "",
       "photoAsset": "yanghaodong-white-v1.png",
-      "bio": "南昌大学乡村振兴发展研究院科研助理。主要从事乡村振兴、城乡规划、城市更新及全过程工程咨询领域，协助开展科研项目落地运营。熟悉乡村振兴政策导向与地方项目落地流程，为区域城乡融合发展提供专业经营支撑。",
+      "bio": "青原研究院特派专员。主要从事乡村振兴、城乡规划、城市更新及全过程工程咨询领域，协助开展科研项目落地运营。熟悉乡村振兴政策导向与地方项目落地流程，为区域城乡融合发展提供专业经营支撑。",
       "photo": "portraits/yanghaodong-white-v1.png"
     }
   ]
